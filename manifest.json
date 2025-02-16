@@ -6,12 +6,15 @@
     "webRequest",
     "activeTab"
   ],
+  "host_permissions": [
+    "http://*/*", "https://*/*"
+  ],
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
-      "matches": ["http://open.spotify.com/*", "https://open.spotify.com/*"],
+      "matches": ["https://open.spotify.com/*"],
       "js": ["content.js"]
     }
   ]
